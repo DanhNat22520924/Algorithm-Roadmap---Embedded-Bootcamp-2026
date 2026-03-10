@@ -1,3 +1,9 @@
+// Ý tưởng: sắp xếp các ký tự của mỗi chuỗi để tạo khóa cho bảng băm.
+// Cấu trúc dữ liệu: unordered_map<string, vector<string>>
+// Độ phức tạp thời gian: O(n * k log k)
+// Độ phức tạp bộ nhớ: O(n * k)
+
+
 class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
