@@ -1,12 +1,16 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
+        // cache lưu vị trí xuất hiện gần nhất của mỗi ký tự
         vector<int> cache(128,-1);
         int left= 0;
         int right= 0;
+        // lưu độ dài substring lớn nhất
         int longest= 0;
 
+        // duyệt chuỗi bằng sliding window
         while (right <s.length()) {
+            // nếu ký tự hiện tại đã xuất hiện trong cửa sổ di chuyển left để loại bỏ ký tự trùng
             if (cache[s[right]] >=left){
                 left= cache[s[right]] +1;
             }
