@@ -1,3 +1,9 @@
+// Ý tưởng: Sliding Window (cửa sổ trượt) + lưu vị trí xuất hiện gần nhất của ký tự
+// Độ phức tạp thời gian: O(n)
+// Độ phức tạp bộ nhớ: O(1)
+
+
+
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
