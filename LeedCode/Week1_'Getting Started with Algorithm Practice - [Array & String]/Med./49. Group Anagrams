@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        vector<vector<string>> output;
+        unordered_map<string, vector<string>> mp;
+
+        // duyệt từng chuỗi trong input
+        for(auto& s : strs) {
+            string temp = s;
+            // sort chuỗi để tạo key
+            sort(s.begin(), s.end());
+            // đưa chuỗi gốc vào nhóm có cùng key
+            mp[s].push_back(temp);
+        }
+        // chuyển dữ liệu từ hashmap sang vector kết quả
+        for(auto& vec : mp)
+            output.push_back(vec.second);
+        return (output);
+    }
+};
