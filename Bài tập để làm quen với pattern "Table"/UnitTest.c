@@ -3,7 +3,6 @@
 #include <string.h>
 #include "cmd_line.h"
 
-// --- MOCK FUNCTION ---
 // Biến toàn cục dùng để kiểm tra xem handler có được gọi hay không
 static int g_called = 0;
 
@@ -66,7 +65,6 @@ void run_test(const test_case_t* tc) {
 }
 
 // --- MAIN---
-// Chạy toàn bộ test cases
 int main(void) {
     int total = sizeof(test_cases) / sizeof(test_cases[0]);
 
